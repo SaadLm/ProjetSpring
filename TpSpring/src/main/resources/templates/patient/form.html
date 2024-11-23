@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+  <div th:replace="layout/base :: content">
+    <h1 th:text="${#fields.hasErrors('*') ? 'Modification du Patient' :
+  'Ajout d\'un Patient'}"></h1>
+    <form th:action="@{/patients/save}" th:object="${patient}"
+          method="post">
+      <input type="hidden" th:field="*{id}" />
+      <label for="nom">Nom:</label>
+      <input type="text" th:field="*{nom}" required />
+      <button type="submit">Enregistrer</button>
+    </form>
+    <a href="/patients">Retour à la liste</a>
+  </div>
+</html>
