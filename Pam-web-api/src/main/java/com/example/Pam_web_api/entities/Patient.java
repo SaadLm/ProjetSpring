@@ -32,10 +32,10 @@ public class Patient {
 
     private Date dateNaissance;
 
-
-//    @OneToMany(mappedBy = "patient")
-//    List<Document> documents;
-
+/*
+    @OneToMany(mappedBy = "patient")
+    List<Document> documents;
+*/
 
 
 }
