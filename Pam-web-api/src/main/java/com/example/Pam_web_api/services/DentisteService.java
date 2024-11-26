@@ -19,14 +19,17 @@ public class DentisteService {
     public Dentiste saveDentiste(Dentiste dentiste) {
         return dentisteRepository.save(dentiste);
     }
+
     // Méthode pour récupérer un dentiste par son ID
     public Optional<Dentiste> getDentisteById(Long id) {
         return dentisteRepository.findById(id);
     }
+
     // Méthode pour récupérer tous les dentistes
     public List<Dentiste> getAllDentistes() {
         return dentisteRepository.findAll();
     }
+
     // Méthode pour mettre à jour un dentiste
     public Dentiste updateDentiste(Long id, Dentiste updatedDentiste) {
         // Find the existing Dentiste by ID
